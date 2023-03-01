@@ -1,6 +1,5 @@
 CPATH='.;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar'
 
-
 set -e 
 
 #Step 1: Clone student submission
@@ -39,11 +38,11 @@ fi
 #Step 5: Run the code
 java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > run-output.txt 
 
-grepCount=`grep -c "testMergeRightEnd" run-output.txt`
+grepCount=`grep -c "OK" run-output.txt`
 
 if [[ $grepCount -eq 0 ]]
 then
-    echo "Test passed"
-else
     echo "Test failed"
+else
+    echo "Test passed"
 fi
