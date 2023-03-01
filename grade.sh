@@ -42,7 +42,7 @@ grepCount=`grep -c "OK" run-output.txt`
 
 if [[ $grepCount -eq 0 ]]
 then
-    echo "Test failed"
+    echo "Test failed! Your code is trash!"
 else
-    echo "Test passed"
+    echo "Test passed! Great job!"
 fi
